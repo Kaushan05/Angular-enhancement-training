@@ -1,0 +1,131 @@
+<!-- <p-card [style]="{ height: '50px', width: '100%' }">
+  <ng-template pTemplate="header">
+
+  </ng-template>
+</p-card> -->
+<div style="display: flex; align-items: center">
+  <img src="../../assets/Images/Logo for page.jpg" alt="" style="width: 85px" />
+  <h2 style="margin: 5px">Welcome to the World of Cars</h2>
+</div>
+<!-- <p-divider></p-divider> -->
+<div>
+  <img
+    src="../../assets/Images/462638tryit.jpg"
+    alt=""
+    style="width: 99%; z-index: -1; position: absolute"
+  />
+  <div style="display: flex; justify-content: end">
+    <p-card
+      [style]="{
+        width: '430px',
+        height: '590px',
+        margin: '6px',
+        background: 'rgba(227, 238, 234, 0.8)',
+      }"
+    >
+      <ng-template pTemplate="header">
+        <h3 class="headingOfCont">
+          <span class="titelStyle">You're</span>
+          One Step away from
+        </h3>
+
+        <h2 class="headingOfCont">
+          <span class="titelCatchPrs">Heaven</span>
+        </h2>
+
+        <p class="infoTxt">Login to Explore :</p>
+      </ng-template>
+
+      <ng-template pTemplate="content">
+        <div [formGroup]="loginGroup" (ngSubmit)="onSubmit()">
+          <div class="inputFldArea">
+            <label for="userNameInputFld">Email:</label>
+          </div>
+
+          <div class="inputFldArea">
+            <input
+              pInputText
+              type="email"
+              formControlName="useremail"
+              id="userNameInputFld"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div class="inputFldArea">
+            <label for="pswrdInputFld">Password :</label>
+          </div>
+
+          <div class="inputFldArea">
+            <input
+              pInputText
+              [type]="passwordType"
+              formControlName="password"
+              id="pswrdInputFld"
+              placeholder="Enter your password"
+            />
+          </div>
+        </div>
+
+        <div style="width: 90%; display: flex; justify-content: space-between">
+          <!-- <p-checkbox [binary]="true" inputId="binary" (click)="showPasswrd()"
+            >Show Password</p-checkbox
+          > -->
+          <div>
+            <p-checkbox
+              value="New York"
+              inputId="ny"
+              (click)="showPasswrd()"
+            ></p-checkbox
+            >&nbsp;
+            <label for="ny">Show Password</label>
+          </div>
+
+          <a href="https://www.atcg.in/assets/images/commingsoon.webp"
+            >Forget password ?</a
+          >
+        </div>
+
+        <div style="display: flex; justify-content: end; width: 90%">
+          <p-button
+            [raised]="true"
+            label="Login"
+            (click)="onSubmit()"
+            [disabled]="!loginGroup.valid"
+            [style]="{ width: '90px', margin: '10px 0px' }"
+          ></p-button>
+        </div>
+
+        <div>
+          <p-divider
+            layout="horizontal"
+            styleClass="flex md:flex"
+            [align]="'center'"
+            [style]="{ margin: '5px' }"
+            ><b>OR</b></p-divider
+          >
+        </div>
+
+        <div>
+          <h3>
+            <span class="catchPrsRegis">"Let's Pop the hood"</span>
+          </h3>
+
+          <h3 style="margin-left: 25px">
+            <span class="registerTgl" (click)="navigateTo()">Register ?</span>
+          </h3>
+        </div>
+      </ng-template>
+    </p-card>
+  </div>
+</div>
+
+<!-- style="width: 100%; height: 650px" -->
+<!-- <img src="assets/images/commingsoon.webp" style="margin-top: 100px" />
+<div>
+  <a
+    href="../home-page/home-page.component.html"
+    style="color: #000; text-decoration: none"
+    >Go Back</a
+  >
+</div> -->
