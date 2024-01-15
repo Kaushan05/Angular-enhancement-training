@@ -1,11 +1,7 @@
 import { Component } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CredentialsService } from '../shared-module/Services/credentials.service';
 
 @Component({
   selector: 'app-home-page',
@@ -13,7 +9,8 @@ import { Router } from '@angular/router';
   styleUrl: './home-page.component.css',
 })
 export class HomePageComponent {
-  constructor(private router: Router, private formBuilder: FormBuilder) {}
+  constructor(private router: Router, private postLink: CredentialsService) {}
+
   passwordType: string = 'password';
 
   loginGroup = new FormGroup({
@@ -21,7 +18,6 @@ export class HomePageComponent {
     password: new FormControl('', [
       Validators.required,
       Validators.minLength(6),
-      Validators.maxLength(12),
     ]),
   });
 
@@ -29,6 +25,9 @@ export class HomePageComponent {
 
   onSubmit() {
     console.log(this.loginGroup.value);
+    this.postLink.addAttendance(this.loginGroup).subscribe((userData: any) => {
+      this.loginGroup = userData;
+    });
   }
 
   showPasswrd() {
