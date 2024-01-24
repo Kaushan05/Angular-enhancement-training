@@ -1,9 +1,9 @@
 <!-- <p-card [style]="{ height: '50px', width: '100%' }">
-  <ng-template pTemplate="header">
-
-  </ng-template>
+  <ng-template pTemplate="header"> </ng-template>
 </p-card> -->
-<div style="display: flex; align-items: center">
+<div
+  style="display: flex; align-items: center; width: 100%; margin-bottom: 2px"
+>
   <img src="../../assets/Images/Logo for page.jpg" alt="" style="width: 85px" />
   <h2 style="margin: 5px">Welcome to the World of Cars</h2>
 </div>
@@ -12,31 +12,38 @@
   <img
     src="../../assets/Images/462638tryit.jpg"
     alt=""
-    style="width: 99%; z-index: -1; position: absolute"
+    style="width: 100%; z-index: -1; position: absolute; height: 90%"
   />
-  <div style="display: flex; justify-content: end">
-    <p-card
-      [style]="{
-        width: '430px',
-        height: '590px',
-        margin: '6px',
-        background: 'rgba(227, 238, 234, 0.8)',
-      }"
+
+  <div class="TxtonBaner">
+    <div>
+      <h1 class="headingOfCont">
+        <span class="titelStyle">You're</span>
+        One Step away from
+      </h1>
+      <h2 class="titelCatchPrs">
+        <span>Heaven</span>
+      </h2>
+    </div>
+  </div>
+
+  <div style="float: right">
+    <div
+      style="
+        backdrop-filter: blur(20px);
+        background-color: rgb(133, 228, 196 / 30%);
+        width: 530px;
+        height: 610px;
+        margin: 6px;
+      "
     >
-      <ng-template pTemplate="header">
-        <h3 class="headingOfCont">
-          <span class="titelStyle">You're</span>
-          One Step away from
-        </h3>
+      <!-- <ng-template pTemplate="header"> -->
 
-        <h2 class="headingOfCont">
-          <span class="titelCatchPrs">Heaven</span>
-        </h2>
+      <p class="infoTxt">Login to Explore :</p>
+      <!-- </ng-template> -->
 
-        <p class="infoTxt">Login to Explore :</p>
-      </ng-template>
-
-      <ng-template pTemplate="content">
+      <!-- <ng-template pTemplate="content"> -->
+      <div style="margin-left: 20px; margin-top: 20px">
         <div [formGroup]="loginGroup" (ngSubmit)="onSubmit()">
           <div class="inputFldArea">
             <label for="userNameInputFld">Email:</label>
@@ -71,17 +78,19 @@
           <!-- <p-checkbox [binary]="true" inputId="binary" (click)="showPasswrd()"
             >Show Password</p-checkbox
           > -->
-          <div>
+          <div style="margin-top: 3px">
             <p-checkbox
               value="New York"
               inputId="ny"
               (click)="showPasswrd()"
             ></p-checkbox
             >&nbsp;
-            <label for="ny">Show Password</label>
+            <label for="ny" class="showPswd">Show Password</label>
           </div>
 
-          <a href="https://www.atcg.in/assets/images/commingsoon.webp"
+          <a
+            href="https://www.atcg.in/assets/images/commingsoon.webp"
+            style="color: rgb(143, 199, 249)"
             >Forget password ?</a
           >
         </div>
@@ -101,7 +110,7 @@
             layout="horizontal"
             styleClass="flex md:flex"
             [align]="'center'"
-            [style]="{ margin: '5px' }"
+            [style]="{ margin: '-8px' }"
             ><b>OR</b></p-divider
           >
         </div>
@@ -112,14 +121,24 @@
           </h3>
 
           <h3 style="margin-left: 25px">
-            <span class="registerTgl" (click)="navigateTo()">Register ?</span>
+            <span class="registerTgl" (click)="navigateTo()">Register?</span>
           </h3>
         </div>
-      </ng-template>
-    </p-card>
+      </div>
+      <!-- </ng-template> -->
+    </div>
   </div>
 </div>
 
+<!-- <div
+  style="
+    background-image: url(../../assets/Images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  "
+>
+
+</div> -->
 <!-- style="width: 100%; height: 650px" -->
 <!-- <img src="assets/images/commingsoon.webp" style="margin-top: 100px" />
 <div>

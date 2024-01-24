@@ -1,1 +1,90 @@
-<p>register-page works!</p>
+<div
+  style="display: flex; align-items: center; width: 100%; margin-bottom: 2px"
+>
+  <img src="../../assets/Images/Logo for page.jpg" alt="" style="width: 85px" />
+  <h2 style="margin: 5px">Welcome to the World of Cars</h2>
+</div>
+<div class="overAllhldr">
+  <div class="registerForm">
+    <!-- Content  -->
+    <div style="margin-left: 20px; margin-top: 20px">
+      <!-- formgroup-->
+      <div [formGroup]="UserProfileDetails" (ngSubmit)="onSubmit()">
+        <!-- name -->
+        <div class="inputFldArea">
+          <label for="userNameInputFld">Full Name :</label>
+        </div>
+
+        <div class="inputFldArea">
+          <input
+            id="userNameInputFld"
+            class="InputFld"
+            pInputText
+            placeholder="Name"
+            formControlName="fullname"
+          />
+        </div>
+        <!-- email -->
+        <div class="inputFldArea">
+          <label for="userEmailInputFld">Email :</label>
+        </div>
+
+        <div class="inputFldArea">
+          <input
+            id="userEmailInputFld"
+            class="InputFld"
+            type="email"
+            pInputText
+            placeholder="Email Address"
+            formControlName="useremail"
+          />
+        </div>
+        <!-- Username  -->
+        <div class="inputFldArea">
+          <label for="userInputFld">Username :</label>
+        </div>
+
+        <div class="inputFldArea">
+          <input
+            id="userInputFld"
+            class="InputFld"
+            pInputText
+            placeholder="Username"
+            formControlName="username"
+          />
+        </div>
+        <!-- password -->
+        <div class="inputFldArea">
+          <label for="userPswrdInputFld">Password :</label>
+        </div>
+
+        <div class="inputFldArea">
+          <input
+            id="userPswrdInputFld"
+            class="InputFld"
+            pInputText
+            placeholder="Password"
+            formControlName="password"
+          />
+        </div>
+        <!-- confrim password -->
+        <div class="inputFldArea">
+          <label for="userCnfrmPswrdInputFld">Confrim Password :</label>
+        </div>
+
+        <div class="inputFldArea">
+          <input
+            id="userCnfrmPswrdInputFld"
+            class="InputFld"
+            pInputText
+            placeholder="Repeat Password"
+            formControlName="confrimpassword"
+          />
+        </div>
+        <div>
+          <button class="signupBtn" type="submit">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
