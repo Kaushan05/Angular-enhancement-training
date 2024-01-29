@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Learning-Ang-app": {
+    "ThrillWheels": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,15 +23,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/learning-ang-app",
+            "outputPath": "dist/thrillwheels",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico.ico",
-              "./src/assets/Images/new_one-removebg-preview.png"
-            ],
+            "assets": ["src/favicon.ico.ico", "src/assets"],
             "styles": [
               "src/styles.css",
               "node_modules/primeng/resources/themes/saga-orange/theme.css",
@@ -67,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Learning-Ang-app:build:production"
+              "buildTarget": "ThrillWheels:build:production"
             },
             "development": {
-              "buildTarget": "Learning-Ang-app:build:development"
+              "buildTarget": "ThrillWheels:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "Learning-Ang-app:build"
+            "buildTarget": "ThrillWheels:build"
           }
         },
         "test": {
