@@ -1,8 +1,9 @@
+<div class="zingg"></div>
 <div
   style="display: flex; align-items: center; width: 100%; margin-bottom: 2px"
 >
   <img src="../../assets/Images/Logo.jpg" alt="" style="width: 85px" />
-  <h2 style="margin: 5px">Welcome to the World of Cars</h2>
+  <h2 class="welcomeTxt" style="margin: 5px">Welcome to the World of Cars</h2>
 </div>
 <div class="overAllhldr">
   <div class="registerForm">
@@ -82,7 +83,9 @@
           />
         </div>
         <div>
-          <button class="signupBtn" type="submit">Sign Up</button>
+          <button class="signupBtn" (click)="onSubmit()" type="submit">
+            Sign Up
+          </button>
         </div>
       </div>
     </div>

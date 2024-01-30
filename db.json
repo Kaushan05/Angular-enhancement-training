@@ -1,1 +1,13 @@
-{}
+{
+  "RegesteredDetails": [
+    {},
+    {
+      "id": "1176",
+      "fullname": "Akila",
+      "useremail": "akila@gmail.com",
+      "username": "Tuner_Akila",
+      "password": "12345A@a",
+      "confrimpassword": "12345A@a"
+    }
+  ]
+}
